@@ -45,7 +45,7 @@ step3:<br>
   git  remote  add  origin  [仓库地址]   //添加远程推送的目标仓库地址<br>
   git  remote  -v   //查看远程仓库地址信息是否添加成功<br>
 step4:<br>
-  git  push  origin  //如何配置一切正常，将弹出github账户、密码登录框验证身份，验证完毕后开始传送。<br>
+  git  push  origin [分支名,如master] //如何配置一切正常，将弹出github账户、密码登录框验证身份，验证完毕后开始传送。<br>
   <br>
 如果执行step4时出现提示<br>
 error: src refspec master does not match any.<br>
