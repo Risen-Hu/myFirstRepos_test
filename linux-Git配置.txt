@@ -1,8 +1,0 @@
-
-Ô­À´£º
-user.email=byhu@example.com
-user.name=byhu
-
-
-git config --global user.name "Risen-Hu"
-git config --global user.email root@linuxidc.net
