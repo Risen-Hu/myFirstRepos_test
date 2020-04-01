@@ -1,3 +1,5 @@
+注意：此仓库仅仅为一个测试git工具功能的仓库！！
+
 Github学习笔记
 
 以下是git工具一些常用的指令与本地与远程仓库同步的操作步骤的记录。
@@ -10,7 +12,7 @@ git  staus  //查看本地代码更改情况
 git  log    //查看各个版本的log，可以加--oneline显示简短信息
 git  reflog //简短表示版本log
 
-git  reset  --hard  [hash_value]  //切换到目标哈希（git  reflog打印出来的）的版本
+git  reset  --hard  [hash_value]  //切换到目标哈希（值为git  reflog打印出来的）的版本
 git  reset  --hard  HEAD^         //回退到上一版本
 git  reset  --hard  HEAD~n        //回退n个版本
 
@@ -47,10 +49,10 @@ step4:
 如果执行step4时出现提示
 error: src refspec master does not match any.
 error: failed to push some refs to 'https://github.com/Risen-Hu/myFirstRepos_test.git(仓库地址)'
-可从以下原因进行排除:
-1.本地git仓库目录下为空
-2.本地仓库add后未commit
-3.git init错误
-4.是否执行step1。通过git config --global -l查看配置
 
+解决方法：
+1.控制面板打开文件夹选项  打开隐藏文件和文件夹显示;
+2.到本地仓库目录下查看是否有.git文件，无则git init;
+3.看.git文件夹下是否有之前提交的文件，若无则重新 git commit (如果之前已执行git add，没有就要重新 add commit);
+4.确认是否已执行step1。通过git config --global -l查看配置;
 
