@@ -1,0 +1,36 @@
+
+*指令
+
+*cat
+ 语法：cat filename
+ 用途：适用于查看文件比较小的情况
+ 扩展：cat -s(多个空行合并成一个空行显示) 文件名
+       cat -b(加行号显示) 文件名
+
+*more
+ 语法：more filename
+ 操作：回车 -- 向下滚动一行
+       空格 -- 翻页，向下
+       退出 -- q
+
+*less
+ 语法：less filename
+ 操作：回车 或 ctrl+n   -- 向下滚动一行
+               ctrl+n   -- 向上滚动一行
+       pagedown 或 空格 -- 翻页，向下
+       pageup   或 空格 -- 翻页，向下
+       退出             -- q
+
+*head  
+ 语法：head -n
+ 作用：从文件的头部开始显示文件的前n行
+ 注意：n不写，默认10行
+
+*tail  
+ 语法：tail -n
+ 作用：从文件的尾部开始显示文件的倒数n行
+ 注意：n不写，默认10行
+
+*nl
+ 语法：nl filename
+ 作用：加行号显示filename内容
