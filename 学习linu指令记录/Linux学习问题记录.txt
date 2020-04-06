@@ -1,0 +1,40 @@
+
+安装软件工具过程中注意一下几点可能造成失败的地方：
+1.网络未连接；
+2.桥接后Linux的ip要与Windows的在同一网段之下；
+3.软件下载源不可靠；
+4.更改配置文件后未执行更新操作；
+
+
+//-------E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?-----------
+
+
+//------------------------------------------------------------------------------------------------------
+
+
+//------------------安装工具包遇到问题：Package ‘xxx’ has no installation candidate---------------------
+
+以安装openssh-server为例。
+安装命令：sudo apt-get install openssh-server
+
+解决办法：
+
+1.先备份/etc/apt/sources.list
+	执行：sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
+2.更新repos
+执行：sudo vi /etc/apt/sources.list，添加以下的内容（或者将原来的内容清空再添加下面的源）
+deb http://archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse 
+deb http://archive.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse 
+deb http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse 
+deb http://archive.ubuntu.com/ubuntu/ trusty-proposed main restricted universe multiverse 
+deb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse 
+
+3.更新
+执行：sudo apt-get update
+
+4.再执行：sudo apt-get install openssh-server，然后就能安装成功了。
+    
+如果遇到版本依赖的冲突，先按照提示安装对应的依赖版本：如apt install openssh-client=1:6.6p1-2ubuntu2.10
+
+
+//------------------------------------------------------------------------------------------------------

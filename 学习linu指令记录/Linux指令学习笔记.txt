@@ -1,0 +1,48 @@
+
+
+find--查找名为a.c的文件：find -name "a.c"
+grep--在当前目录下搜索含abc字样的文件：grep "abc" * -nR
+rm--删除命令。强制删除一个目录机器内容指令：rm -rf sir_name。-r递归删除，-f强制删除
+
+ifconfig 网卡查看命令
+//查看配置
+a.ifconfig
+//设置网卡ip
+b.sudo ifconfig + 网卡名 + 待设置ip
+//关网卡
+c.sudo ifconfig + 网卡名 + down 
+//开网卡
+d.sudo ifconfig + 网卡名 + up
+//测试网络连通性
+e.ping windows ip, ping ip
+
+
+1.查看防火墙当前状态：sudo ufw status
+2.开启防火墙：sudo ufw enable
+3.关闭防火墙：sudo ufw disable
+
+查看开启的端口：netstat -ntl
+检查端口22是否开启：netstat -nat | grep 22
+
+检查连接状态：ftp localhost,如果出现问题: connect: Connection refused
+解决办法：vsftpd /etc/vsftpd/vsftpd.conf &
+
+开启、停止、重启vsftpd服务程序：
+	sudo /etc/init.d/vsftpd start 或者 sudo service vsftpd start   
+	sudo /etc/init.d/vsftpd stop 或者 sudo service vsftpd stop
+	sudo /etc/init.d/vsftpd restart 或者 sudo service vsftpd restart   
+
+共享Windows文件给Ubuntu操作：https://www.linuxidc.com/Linux/2017-09/147167.htm
+共享Ubuntu文件给Windows操作：https://www.e-learn.cn/content/linux/1391334
+查看共享文件夹是否存在：cd /mnt/hgfs/
+
+查看并修改端口号：sudo vim /etc/services
+
+重启虚拟机：reboot
+
+gcc-arm-none-eabi-xxx-linux安装教程：https://blog.csdn.net/xingqingly/article/details/51035554
+
+更改环境变量命令：source /root/.bashrc，若提示：sudo: source: command not found，先执行：sudo -s，exit退出root
+
+
+
